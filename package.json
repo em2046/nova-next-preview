@@ -2,10 +2,11 @@
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server",
+    "prettier": "prettier --write src/**/*.{js,vue}",
     "build": "webpack --env.prod"
   },
   "dependencies": {
-    "@em2046/nova-next": "^2.0.0-alpha.1",
+    "@em2046/nova-next": "^2.0.0-alpha.5",
     "vue": "^3.0.0-beta.10"
   },
   "devDependencies": {
@@ -13,6 +14,7 @@
     "css-loader": "^3.5.3",
     "file-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
+    "prettier": "^2.0.5",
     "url-loader": "^4.1.0",
     "vue-loader": "^16.0.0-beta.1",
     "webpack": "^4.43.0",
