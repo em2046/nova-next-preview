@@ -1,5 +1,6 @@
 {
-  "private": true,
+  "author": "em2046",
+  "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server",
     "prettier": "prettier --write src/**/*.{js,vue}",
