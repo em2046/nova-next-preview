@@ -8,7 +8,7 @@ module.exports = (env = {}) => ({
   entry: path.resolve(__dirname, './src/main.js'),
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/'
+    publicPath: '/dist/',
   },
   resolve: {
     alias: {
@@ -16,45 +16,45 @@ module.exports = (env = {}) => ({
       // is a simple `export * from '@vue/runtime-dom`. However having this
       // extra re-export somehow causes webpack to always invalidate the module
       // on the first HMR update and causes the page to reload.
-      vue: '@vue/runtime-dom'
-    }
+      vue: '@vue/runtime-dom',
+    },
   },
   module: {
     rules: [
       {
         test: /\.vue$/,
-        use: 'vue-loader'
+        use: 'vue-loader',
       },
       {
         test: /\.png$/,
         use: {
           loader: 'url-loader',
-          options: { limit: 8192 }
-        }
+          options: { limit: 8192 },
+        },
       },
       {
         test: /\.css$/,
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: { hmr: !env.prod }
+            options: { hmr: !env.prod },
           },
-          'css-loader'
-        ]
-      }
-    ]
+          'css-loader',
+        ],
+      },
+    ],
   },
   plugins: [
     new VueLoaderPlugin(),
     new MiniCssExtractPlugin({
-      filename: '[name].css'
-    })
+      filename: '[name].css',
+    }),
   ],
   devServer: {
     inline: true,
     hot: true,
     stats: 'minimal',
     contentBase: __dirname,
-    overlay: true
-  }
+    overlay: true,
+  },
 })

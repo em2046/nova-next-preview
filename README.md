@@ -1,2 +1,1 @@
-# nova-next-preview
- 
+# Nova Next Preview
